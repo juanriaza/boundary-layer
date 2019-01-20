@@ -99,6 +99,7 @@ class DagArgsSchema(StrictSchema):
     # schedule_interval argument supports cron strings (e.g. 0 * * * *),
     # '@hourly/daily/etc', or numeric (seconds)
     schedule_interval = fields.String(allow_none=True)
+    params = fields.Dict()
 
 
 class PrimaryDagSchema(BaseDagSchema):
